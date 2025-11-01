@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="main.css">
+    <script src="insert-correctness-table.js"></script>
+    <script src="insert-f1-table.js"></script>
+    <script src="insert-confusion-matrix.js"></script>
+    <script src="analysis.js"></script>
+</head>
+
+<body>
+    <h1>Detection Result</h1>
+    <br><br>
+
+    <h2>Overall Correctness contrast table</h2>
+    <p>The overall correctness of the model, including both of the human-written contents detection and the AIGC
+        detection</p>
+    <br>
+    <table class="general-table" id="correct-percentage-table-overall">
+        <tr id="correct-percentage-table-demo-row">
+            <td class="correct-percentage-name">
+                Model name
+            </td>
+            <td class="correct-percentage-visual">
+                <span class="correct-percentage-visual-bar-container">
+                    <span class="correct-percentage-visual-bar"></span> <!-- style="width:100%;"-->
+                </span>
+            </td>
+            <td class="correct-percentage-percent">
+                Percentage correct
+            </td>
+            <td class="correct-percentage-correct-number-and-all">
+                Correct / All
+            </td>
+        </tr>
+    </table>
+
+    <br><br>
+
+
+    <h2>Detection of Human-written Contents Correctness contrast table</h2>
+    <p>How good is the model at detecting human-written contents</p>
+    <br>
+    <table class="general-table" id="correct-percentage-table-detect-human-written">
+        <tr id="correct-percentage-table-demo-row">
+            <td class="correct-percentage-name">
+                Model name
+            </td>
+            <td class="correct-percentage-visual">
+                <span class="correct-percentage-visual-bar-container">
+                    <span class="correct-percentage-visual-bar"></span> <!-- style="width:100%;"-->
+                </span>
+            </td>
+            <td class="correct-percentage-percent">
+                Percentage correct
+            </td>
+            <td class="correct-percentage-correct-number-and-all">
+                Correct / All
+            </td>
+        </tr>
+    </table>
+
+    <br><br>
+
+
+
+    <h2>Detection of AIGC Correctness contrast table</h2>
+    <p>How good is the model at detecting AIGC</p>
+    <br>
+    <table class="general-table" id="correct-percentage-table-detect-aigc">
+        <tr id="correct-percentage-table-demo-row">
+            <td class="correct-percentage-name">
+                Model name
+            </td>
+            <td class="correct-percentage-visual">
+                <span class="correct-percentage-visual-bar-container">
+                    <span class="correct-percentage-visual-bar"></span> <!-- style="width:100%;"-->
+                </span>
+            </td>
+            <td class="correct-percentage-percent">
+                Percentage correct
+            </td>
+            <td class="correct-percentage-correct-number-and-all">
+                Correct / All
+            </td>
+        </tr>
+    </table>
+
+    <br><br>
+
+
+
+    
+
+
+    <h2>F1 Scores of Different Models</h2>
+    <br>
+
+    <table class="general-table" id="f1-score-table">
+        <tr id="f1-score-table-demo-row">
+            <td class="f1-score-model-name">
+                Model name
+            </td>
+            <td class="f1-score-precision">
+                Precision
+            </td>
+            <td class="f1-score-recall">
+                Recall
+            </td>
+            <td class="f1-score-f1-score">
+                F1-Score
+            </td>
+        </tr>
+    </table>
+
+    <br><br>
+
+
+
+
+
+    <h2>Confusion Matrix</h2>
+    <br>
+
+    <div id="confusion-matrix-container">
+        <!--
+                                            Predicted
+                                Positive                Negative
+                    Positive    True positive           False negative
+            Actual
+                    Negative    False positive          True negative
+            
+            -->
+        <div class="single-confusion-matrix-div" id="confusion-matrix-demo">
+            <h3 style="text-align: center;">Confusion matrix of <span class="single-confusion-matrix-model-name"></span>
+            </h3>
+
+            <table class="single-confusion-matrix-table">
+                <tr>
+                    <td class="confusion-matrix-tp">
+
+                    </td>
+                    <td class="confusion-matrix-fn">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="confusion-matrix-fp">
+
+                    </td>
+                    <td class="confusion-matrix-tn">
+
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
